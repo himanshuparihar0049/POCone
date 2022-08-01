@@ -1,5 +1,6 @@
 name: Base Commands
-on: [push]
+on:
+  workflow_dispatch   
 
 jobs:
   build:
@@ -7,5 +8,4 @@ jobs:
     steps:
       - run: |
           pwd
-          ls -a
-          ls -ltr
+          Get-ChildItem
