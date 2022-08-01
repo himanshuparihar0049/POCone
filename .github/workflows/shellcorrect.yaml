@@ -1,0 +1,24 @@
+name: shell commands
+
+on:
+  workflow_dispatch:
+    - main
+    
+jobs:
+  run-shell-command:
+    runs-on: windows_latest
+    steps: 
+      - name : Echo a tring
+        run : echo "This is Github Actions by Himanshu"
+      - name : multiline script
+        run : |
+           pwd
+           ls
+           date
+      - name : windows machine
+      - uses: actions/checkout@v2
+      - uses: actions/setup-dotnet@v1
+      - name: Build
+          run: dotnet build
+      - name: Run tests
+          run: dotnet test
