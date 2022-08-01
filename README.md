@@ -1,2 +1,1 @@
-# pocOne
 # POCone
