@@ -16,9 +16,9 @@ jobs:
            ls
            date
       - name : windows machine
-          - uses: actions/checkout@v2
-          - uses: actions/setup-dotnet@v1
-          - name: Build
-              run: dotnet build
-          - name: Run tests
-              run: dotnet test
+      - uses: actions/checkout@v2
+      - uses: actions/setup-dotnet@v1
+      - name: Build
+        run: dotnet build
+      - name: Run tests
+        run: dotnet test
