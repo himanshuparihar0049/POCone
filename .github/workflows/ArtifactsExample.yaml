@@ -1,5 +1,5 @@
 name: Upload artifacts
-on: [push]
+
 on:
   workflow_dispatch   
 
@@ -15,4 +15,4 @@ jobs:
           path: world.txt
           
       - name: Download Artifact
-      - uses: actions/download-artifact
+      - uses: actions/download-artifact@v3
