@@ -8,11 +8,11 @@ jobs:
     runs-on: windows-latest
     steps:
     - run: pwd
-     # - run: echo "uploading artifacts" > upload.txt
+    - run: echo "uploading artifacts" > D:\a\POCone\POCone\upload.txt
       
-     # - name: Upload artifact1
-     # - uses: actions/upload-artifact@v3
-      #  with:
-       #   name: my-artifact
-        #  path: upload.txt
+    - name: Upload artifact1
+    - uses: actions/upload-artifact@v3
+      with:
+         name: my-artifact
+         path: D:\a\POCone\POCone\upload.txt
         
