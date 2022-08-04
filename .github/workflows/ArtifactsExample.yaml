@@ -9,6 +9,8 @@ jobs:
     steps:
       - name: Upload artifact
       - run: echo "uploading artifacts" > upload.txt
+      
+      - name: Upload artifact1
       - uses: actions/upload-artifact@v3
         with:
           name: my-artifact
