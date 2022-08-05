@@ -24,3 +24,23 @@ jobs:
     
     - name: Display structure of downloaded files
       run: ls -R
+      
+    - name: Semantic Versoning
+      id: versioning
+      uses: paulhatch/semantic-version@v4.0.2
+      with:
+        branch: main
+        tag_prefixes: "y"
+        major_pattern: "Breaking_Change:"
+        minor_pattern: "feat:"
+        format: "v${major}.${minor}.${patch}-prereleases$(increment)"
+        
+    - name: Create Release
+      uses: actions/create-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrests.github_token }}
+      with:
+        tag_name: ${{ steps.versioning.outputs.version }}
+        release_name: ${{ steps.versioning.outputs.version }}
+        prerelease: true
+        
