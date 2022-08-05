@@ -15,4 +15,12 @@ jobs:
       with:
          name: my-artifact
          path: D:/a/POCone/POCone/upload.txt
+    
+    - name: Download artifact
         
+      uses: actions/download-artifact@v3
+      with:
+        name: my-artifact
+    
+    - name: Display structure of downloaded files
+      run: ls -R
